@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CEO Coaching International · A Custom Strategy · Talex Media</title>
+<link rel="icon" type="image/png" sizes="192x192" href="https://static.wixstatic.com/media/3c6878_9a68ae0b3ff84e198fdd43fac493e294~mv2_d_1500_1500_s_2.png/v1/fill/w_192,h_192,lg_1,usm_0.66_1.00_0.01/3c6878_9a68ae0b3ff84e198fdd43fac493e294~mv2_d_1500_1500_s_2.png"/>
+<link rel="shortcut icon" href="https://static.wixstatic.com/media/3c6878_9a68ae0b3ff84e198fdd43fac493e294~mv2_d_1500_1500_s_2.png/v1/fill/w_32,h_32,lg_1,usm_0.66_1.00_0.01/3c6878_9a68ae0b3ff84e198fdd43fac493e294~mv2_d_1500_1500_s_2.png" type="image/png"/>
+<link rel="apple-touch-icon" href="https://static.wixstatic.com/media/3c6878_9a68ae0b3ff84e198fdd43fac493e294~mv2_d_1500_1500_s_2.png/v1/fill/w_180,h_180,lg_1,usm_0.66_1.00_0.01/3c6878_9a68ae0b3ff84e198fdd43fac493e294~mv2_d_1500_1500_s_2.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --o:#E85A0C;
+  --o-dim:rgba(232,90,12,0.08);
+  --o-mid:rgba(232,90,12,0.18);
+  --o-border:rgba(232,90,12,0.28);
+  --bg:#F5F2EC;
+  --surface:#FFFFFF;
+  --surface2:#FAF8F5;
+  --border:#E2DDD6;
+  --border-strong:#C8C2BA;
+  --txt:#1A1816;
+  --txt2:#6B625A;
+  --txt3:#A89E96;
+  --green:#2D8C52;
+  --green-bg:#EDF7F2;
+  --green-border:#A8D9BC;
+  --red:#C0392B;
+  --red-bg:#FDF0EE;
+  --red-border:#E8BEBC;
+  --amber:#B07D10;
+  --amber-bg:#FDF7EC;
+  --amber-border:#E0C880;
+}
+
+html{background:var(--bg);color:var(--txt);font-family:'DM Sans',system-ui,sans-serif;font-size:15px;line-height:1.6}
+body{background:var(--bg);min-height:100vh}
+#wrap{max-width:700px;margin:0 auto;padding:0 1.25rem 5rem}
+
+.disp{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1}
+.head{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:0.02em;line-height:1.1}
+.lbl{font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.14em;text-transform:uppercase}
+.italic{font-family:'EB Garamond',Georgia,serif;font-style:italic}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--border)}
+.topbar-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.topbar-logo{height:28px;width:auto}
+.topbar-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.08em;color:var(--txt)}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.topbar-cta{background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 14px;border-radius:6px;text-decoration:none;transition:background 0.15s}
+.topbar-cta:hover{background:#c94d08}
+
+.hero{padding:3rem 0 2.5rem;border-bottom:2px solid var(--o)}
+.hero-step{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;flex-wrap:wrap}
+.step-pill{background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.hero-eyebrow{font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--txt2)}
+.hero-title{font-size:clamp(40px,8vw,66px);color:var(--txt);margin-bottom:0.5rem}
+.hero-tagline{font-size:clamp(19px,3.5vw,26px);color:var(--o);margin-bottom:1rem}
+
+.stat-strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:8px;background:var(--surface);overflow:hidden;margin:2rem 0}
+.stat-cell{padding:1rem;text-align:center;border-right:1px solid var(--border)}
+.stat-cell:last-child{border-right:none}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:0.04em;color:var(--o)}
+.stat-label{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--txt3);font-family:'Oswald',sans-serif;font-weight:400}
+
+.source-link{font-size:11px;color:var(--txt3);text-decoration:none;border-bottom:1px dotted var(--border-strong);transition:color 0.15s,border-color 0.15s;white-space:nowrap;margin-left:4px;font-family:'Oswald',sans-serif;letter-spacing:0.04em;position:relative;z-index:2}
+.source-link:hover{color:var(--o);border-bottom-color:var(--o)}
+.source-link::before{content:"↗ "}
+
+.callout{border-left:3px solid var(--o);padding:1rem 1.25rem;background:var(--surface);border-radius:0 8px 8px 0;margin:1.75rem 0}
+.callout p{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:16px;color:var(--txt);line-height:1.75}
+.callout-attr{margin-top:0.6rem;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--o);font-family:'Oswald',sans-serif;font-weight:500}
+.callout-attr a{color:inherit;border-bottom:1px dotted var(--border-strong);text-decoration:none;transition:color 0.15s,border-color 0.15s}
+.callout-attr a:hover{color:var(--o);border-bottom-color:var(--o)}
+
+.section-intro{margin-bottom:1.25rem}
+.section-intro-row{display:flex;align-items:center;gap:8px;margin-bottom:0.4rem}
+.sec-pill-dark{background:var(--txt);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.sec-pill-orange{background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.section-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--txt3)}
+.section-title{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:0.02em;line-height:1.1;font-size:22px;color:var(--txt);margin-bottom:0.25rem}
+.section-subtitle{font-size:13px;color:var(--txt3);font-style:italic;font-family:'EB Garamond',Georgia,serif}
+
+.section-block{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem}
+.section-block p{font-size:14px;color:var(--txt2);line-height:1.8;margin-bottom:0.9rem}
+.section-block p:last-child{margin-bottom:0}
+.section-block strong{color:var(--txt);font-weight:500}
+.section-block em{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt)}
+.section-block a{color:var(--txt2);text-decoration:none;border-bottom:1px dotted var(--border-strong);transition:color 0.15s,border-color 0.15s}
+.section-block a:hover{color:var(--o);border-bottom-color:var(--o)}
+
+.rule{height:1px;background:var(--border);border:none;margin:1.5rem 0}
+.rule-orange{height:2px;background:var(--o);border:none;margin:2.5rem 0}
+
+.ideas-grid{display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem}
+.idea-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.3rem;display:flex;gap:1.1rem;align-items:flex-start}
+.idea-card-featured{background:rgba(232,90,12,0.05);border-color:var(--o)}
+.idea-num{flex-shrink:0;width:36px;height:36px;background:var(--o);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:18px;display:flex;align-items:center;justify-content:center;border-radius:6px;margin-top:2px;letter-spacing:0.04em}
+.idea-body{flex:1;min-width:0}
+.idea-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;color:var(--txt);letter-spacing:0.02em;margin-bottom:6px;line-height:1.35}
+.idea-desc{font-size:13.5px;color:var(--txt2);line-height:1.7}
+.idea-desc em{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt)}
+.idea-tag{margin-top:10px;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--o);text-transform:uppercase;font-weight:600}
+.idea-tag a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--o)}
+.idea-tag a:hover{border-bottom-style:solid}
+
+.reel-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:0.5rem}
+@media(max-width:560px){.reel-grid{grid-template-columns:1fr}}
+.reel-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.95rem 1.05rem;display:flex;flex-direction:column}
+.reel-eyebrow{font-family:'Oswald',sans-serif;font-size:9.5px;letter-spacing:0.16em;color:var(--o);text-transform:uppercase;font-weight:600;margin-bottom:0.4rem}
+.reel-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13.5px;color:var(--txt);letter-spacing:0.03em;margin-bottom:0.45rem;line-height:1.3}
+.reel-body{font-size:12.5px;color:var(--txt2);line-height:1.6;flex:1;margin-bottom:0.5rem}
+.reel-body em{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt)}
+.reel-body a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--border-strong);transition:color 0.15s,border-color 0.15s}
+.reel-body a:hover{color:var(--o);border-bottom-color:var(--o)}
+
+.whats-inside{margin:0.5rem 0 1rem}
+.wi-heading{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;color:var(--txt);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem;text-align:center}
+.whats-inside-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:560px){.whats-inside-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.whats-inside-grid{grid-template-columns:1fr}}
+.wi-card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.95rem 1rem;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s}
+.wi-card:hover{border-color:var(--o);background:#FCFAF7}
+.wi-num{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--o);line-height:1;letter-spacing:0.04em;margin-bottom:8px}
+.wi-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;color:var(--txt);letter-spacing:0.04em;margin-bottom:5px;line-height:1.3;text-transform:uppercase}
+.wi-desc{font-size:12.5px;color:var(--txt2);line-height:1.55}
+
+.case-card{background:var(--txt);border-radius:12px;padding:1.5rem 1.5rem 1.75rem;margin-bottom:1rem;color:#fff;overflow:hidden}
+.cs-label{font-family:'Oswald',sans-serif;font-weight:500;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--o);margin-bottom:0.5rem}
+.cs-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,42px);letter-spacing:0.03em;line-height:1;color:#fff;margin-bottom:1.1rem}
+.cs-stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.25rem}
+.cs-stat-cell{background:rgba(255,255,255,0.04);border-top:2px solid var(--o);padding:0.75rem 0.6rem 0.65rem}
+.cs-stat-num{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.03em;color:var(--o);line-height:1.05}
+.cs-stat-label{font-size:10px;color:rgba(255,255,255,0.55);line-height:1.35;margin-top:2px}
+.cs-section{border-left:3px solid var(--o);padding:0.5rem 0 0.5rem 0.85rem;margin-bottom:0.9rem}
+.cs-section:last-child{margin-bottom:0}
+.cs-section-label{font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:0.35rem}
+.cs-section-body{font-size:13px;color:rgba(255,255,255,0.78);line-height:1.7}
+.cs-footer-meta{margin-top:1.1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.45);font-family:'Oswald',sans-serif;letter-spacing:0.06em;text-align:center}
+
+.cred-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.25rem}
+.cred-chip{padding:6px 12px;border:1px solid var(--o-border);background:var(--o-dim);border-radius:4px;font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--o)}
+
+.byline{display:flex;gap:14px;align-items:center;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin:1.5rem 0}
+.byline-avatar{width:60px;height:60px;border-radius:50%;overflow:hidden;background:var(--o-dim);border:2px solid var(--o);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--o);flex-shrink:0}
+.byline-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.byline-body{flex:1;min-width:0}
+.byline-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--txt);letter-spacing:0.03em}
+.byline-sub{font-size:12px;color:var(--txt2);line-height:1.5;margin-top:2px}
+
+.brand-mark-row{display:flex;align-items:center;gap:14px;margin-bottom:1.25rem;flex-wrap:wrap}
+.brand-logo-wrap{width:56px;height:56px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:6px;flex-shrink:0}
+.brand-logo-wrap img{max-width:100%;max-height:100%;object-fit:contain}
+.brand-logo-fallback{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;color:var(--o);line-height:1}
+
+.channel-grid{display:grid;grid-template-columns:1fr;gap:6px;margin-bottom:1rem}
+.channel-card{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.7rem 0.95rem;display:flex;gap:12px;align-items:flex-start;transition:border-color 0.15s,background 0.15s}
+.channel-card:hover{border-color:var(--o);background:#FCFAF7}
+.channel-link{position:absolute;inset:0;z-index:1;border-radius:8px}
+.channel-link:focus-visible{outline:2px solid var(--o);outline-offset:2px}
+.channel-icon{width:18px;height:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.channel-icon svg{width:18px;height:18px;display:block}
+.channel-icon.linkedin svg{fill:#0A66C2}
+.channel-icon.youtube svg{fill:#FF0000}
+.channel-icon.facebook svg{fill:#1877F2}
+.channel-icon.instagram svg{fill:#E4405F}
+.channel-icon.twitter svg{fill:#000}
+.channel-icon.tiktok svg{fill:#000}
+.channel-icon.spotify svg{fill:#1DB954}
+.channel-icon.applepodcasts svg{fill:#832BC1}
+.channel-icon.threads svg{fill:#000}
+.channel-icon.substack svg{fill:#FF6719}
+.channel-icon.blog svg{fill:var(--txt2)}
+.channel-icon.website svg{fill:var(--txt)}
+.channel-icon.books svg{fill:var(--o)}
+.channel-icon.vimeo svg{fill:#1AB7EA}
+.channel-handle a,.channel-snippet a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--border-strong);transition:color 0.15s,border-color 0.15s}
+.channel-handle a:hover,.channel-snippet a:hover{color:var(--o);border-bottom-color:var(--o)}
+.channel-body{flex:1;min-width:0}
+.channel-head{display:flex;align-items:baseline;gap:8px;margin-bottom:2px;flex-wrap:wrap}
+.channel-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;color:var(--txt);letter-spacing:0.06em;text-transform:uppercase}
+.channel-handle{font-size:11px;color:var(--txt3);font-family:'Oswald',sans-serif;letter-spacing:0.04em}
+.channel-snippet{font-size:13px;color:var(--txt2);line-height:1.55}
+.channel-snippet em{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt)}
+.channel-snippet ul{list-style:none;padding:0;margin:0 0 6px 0}
+.channel-snippet ul li{position:relative;padding-left:14px;margin-bottom:3px}
+.channel-snippet ul li::before{content:"·";position:absolute;left:4px;top:-2px;color:var(--o);font-weight:700;font-size:16px;line-height:1}
+.channel-snippet ul li:last-child{margin-bottom:0}
+
+.cta-block{background:var(--txt);border-radius:12px;padding:2.25rem 1.75rem;margin-top:2rem;text-align:center}
+.cta-eyebrow{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,90,12,0.9);font-family:'Oswald',sans-serif;font-weight:500;margin-bottom:0.75rem}
+.cta-headline{font-size:clamp(28px,5vw,44px);color:#fff;margin-bottom:0.6rem}
+.cta-sub{font-size:13.5px;color:rgba(255,255,255,0.65);line-height:1.75;max-width:480px;margin:0 auto 1.75rem}
+.cta-primary{display:inline-block;background:var(--o);color:#fff;padding:14px 30px;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.15s,transform 0.1s}
+.cta-primary:hover{background:#c94d08}
+.cta-primary:active{transform:scale(0.98)}
+.cta-reply{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.08);font-size:13px;color:rgba(255,255,255,0.55);font-family:'EB Garamond',Georgia,serif;font-style:italic;line-height:1.6}
+
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:8px}
+.faq-q{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--txt);margin-bottom:6px;letter-spacing:0.02em}
+.faq-a{font-size:13px;color:var(--txt2);line-height:1.7}
+
+.site-footer{margin-top:3rem;padding:1.5rem 0 1rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.08em;color:var(--txt2)}
+.footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:var(--txt3);text-decoration:none;letter-spacing:0.06em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+.footer-links a:hover{color:var(--o)}
+.footer-copy{font-size:11px;color:var(--txt3);width:100%}
+
+@media print{
+  body{background:#fff}
+  .topbar-cta,.cta-primary{display:none}
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+  <nav class="topbar">
+    <a class="topbar-brand" href="https://www.talexmedia.com" target="_blank">
+      <img class="topbar-logo"
+        src="https://static.wixstatic.com/media/3c6878_456d81e9cdb84e6c8bb3260ebfcc0523~mv2.png"
+        alt="Talex Media"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'"
+      />
+      <span class="topbar-name" style="display:none">TALEX MEDIA</span>
+    </a>
+    <div class="topbar-right">
+      <a class="topbar-cta" href="https://calendly.com/d/ct7b-xvd-c9x/intro-call" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="brand-mark-row">
+      <div class="brand-logo-wrap">
+        <img src="assets/logo.svg" alt="CEO Coaching International logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'" />
+        <span class="brand-logo-fallback" style="display:none">CCI</span>
+      </div>
+      <div class="hero-step" style="margin-bottom:0">
+        <div class="step-pill">A Custom Strategy For CCI</div>
+        <span class="hero-eyebrow">Mario Simon · Prepared May 2026</span>
+      </div>
+    </div>
+    <h1 class="disp hero-title">A Custom Look<br/>At Your Video Content Presence</h1>
+    <div class="italic hero-tagline">You've coached 2,000+ CEOs and engineered $26.6B in client exits. The audit is on how to put that body of work on camera, where it can carry.</div>
+  </header>
+
+  <div class="stat-strip">
+    <div class="stat-cell">
+      <div class="stat-num">$26.6B</div>
+      <div class="stat-label">Client Exits To Date</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">272</div>
+      <div class="stat-label">Podcast Episodes Since 2015</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">521</div>
+      <div class="stat-label">YouTube Subscribers</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>"I'm thrilled to join CEO Coaching International, an unparalleled team with extraordinary depth, unmatched experience, and a shared commitment to excellence. What truly sets this group apart is not only the caliber of its people, but the integrity and humanity they bring to every client relationship."</p>
+    <div class="callout-attr">Dr. Mario Simon · <a href="https://www.prnewswire.com/news-releases/former-changemakers-ceo-and-boston-consulting-group-partner-joins-ceo-coaching-international-as-partner-and-coach-302590687.html" target="_blank" rel="noopener">On joining CCI as Partner, October 22, 2025</a></div>
+  </div>
+
+  <div class="byline">
+    <div class="byline-avatar">
+      <img src="https://static.wixstatic.com/media/3c6878_f5b394fdd9fb45c98fc7e838f91ea231~mv2.jpg" alt="Tom Langan"
+           onerror="this.style.display='none'; this.parentElement.textContent='TL'" />
+    </div>
+    <div class="byline-body">
+      <div class="byline-name">Prepared by Tom Langan · Founder, Talex Media</div>
+      <div class="byline-sub">Author of <em>Legendeering</em></div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <p>Mario, I'm Tom Langan. I spent time looking at the channels CEO Coaching International publishes through, with a lens on visual communication and where the firm's story is actually landing in public.</p>
+    <p>I've spent 25 years in video and television production as a Director of Photography, Producer, and Showrunner, earning two Emmy nominations and leading multi-million dollar productions for global broadcasters like the BBC, NBCUniversal, and Discovery filming all over the world from the Arctic Circle to sub-Saharan Africa.</p>
+    <p>My job was, and still is, to make video that people actually want to watch.</p>
+    <p>In order to do this (create audience first content that leaves people feeling good about supporting your brand and your mission) we need to always take your broader public footprint into account. What follows here is our honest take on what we saw, and where we'd start if we were working together.</p>
+  </div>
+
+  <div class="whats-inside">
+    <h2 class="wi-heading">What's Inside</h2>
+    <div class="whats-inside-grid">
+      <a class="wi-card" href="#sec-reel">
+        <div class="wi-num">01</div>
+        <div class="wi-title">The CCI Reel</div>
+        <div class="wi-desc">A look at what's already in public</div>
+      </a>
+      <a class="wi-card" href="#sec-equity">
+        <div class="wi-num">02</div>
+        <div class="wi-title">The Equity You've Built</div>
+        <div class="wi-desc">Three layers, two strong, one to evolve</div>
+      </a>
+      <a class="wi-card" href="#sec-strategy">
+        <div class="wi-num">03</div>
+        <div class="wi-title">Lead With Value</div>
+        <div class="wi-desc">The Legendeering framework, in one page</div>
+      </a>
+      <a class="wi-card" href="#sec-worlds">
+        <div class="wi-num">04</div>
+        <div class="wi-title">Three Ideas For Video</div>
+        <div class="wi-desc">Formats built around the work CCI has already done</div>
+      </a>
+      <a class="wi-card" href="#sec-films">
+        <div class="wi-num">05</div>
+        <div class="wi-title">Past Talex Films</div>
+        <div class="wi-desc">Three projects across three industries</div>
+      </a>
+      <a class="wi-card" href="#sec-faq">
+        <div class="wi-num">FAQ</div>
+        <div class="wi-title">A Few Questions</div>
+        <div class="wi-desc">What you might be wondering</div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">✓</span>
+      <span class="section-eyebrow">Where You Show Up</span>
+    </div>
+    <h2 class="section-title">The Channels We Looked At</h2>
+    <p class="section-subtitle">Where CCI shows up in public, with a few things that stood out across each surface.</p>
+  </div>
+
+  <div class="channel-grid">
+
+    <div class="channel-card">
+      <a class="channel-link" href="https://ceocoachinginternational.com/" target="_blank" rel="noopener" aria-label="Visit CEO Coaching International website"></a>
+      <div class="channel-icon website">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+      <div class="channel-body">
+        <div class="channel-head">
+          <span class="channel-name">Website</span>
+          <span class="channel-handle">ceocoachinginternational.com</span>
+        </div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Hero: <em>"Be The Leader You Want To Be."</em> Six named exit clients on the homepage with attributable outcomes: Jiffy Lube (Richard Paek), Under Canvas (Sarah Dusek), Victra (Rich Balot), Lucent Health, NewDay USA, and ShipMonk.</li>
+            <li>One Vimeo embed near the top of the page, <em>"How Coaching Helps CEOs Become the Best Version of Themselves."</em> The rest of the page is text and stat blocks, including 2,000+ CEOs coached, 107 exits worth $26.6B, an average client EBITDA CAGR of 37.5%.</li>
+          </ul>
+          <a class="source-link" href="https://ceocoachinginternational.com/" target="_blank" rel="noopener">ceocoachinginternational.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <a class="channel-link" href="https://www.youtube.com/channel/UCFrE489fb4Zn6Sr5CnoRz9w" target="_blank" rel="noopener" aria-label="Visit CCI on YouTube"></a>
+      <div class="channel-icon youtube">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="channel-body">
+        <div class="channel-head">
+          <span class="channel-name">YouTube</span>
+          <span class="channel-handle">CEO Coaching International</span>
+        </div>
+        <div class="channel-snippet">
+          <ul>
+            <li>521 subscribers, 164 videos, 1,958,523 total lifetime views. The last ten uploads average 1 like and 0 comments, which means the channel is shipping consistently into a quiet room.</li>
+            <li>One striking outlier from August 4, 2025: <a href="https://www.youtube.com/results?search_query=%22Meet+Mary+Naylor%22+CEO+Coaching+International" target="_blank" rel="noopener">"Meet Mary Naylor"</a> hit 24,428 views, while three other "Meet [Coach]" uploads the same day got 4, 12, and 12 views. When one person had a real audience to share it with, the format reached. When they did not, the same format reached nobody.</li>
+          </ul>
+          <a class="source-link" href="https://www.youtube.com/channel/UCFrE489fb4Zn6Sr5CnoRz9w" target="_blank" rel="noopener">youtube.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <a class="channel-link" href="https://www.linkedin.com/in/markmoses" target="_blank" rel="noopener" aria-label="Visit Mark Moses on LinkedIn"></a>
+      <div class="channel-icon linkedin">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </div>
+      <div class="channel-body">
+        <div class="channel-head">
+          <span class="channel-name">LinkedIn (Mark Moses)</span>
+          <span class="channel-handle">in/markmoses · Founding Partner & Executive Chairman</span>
+        </div>
+        <div class="channel-snippet">
+          <ul>
+            <li>30,000 followers. The CCI homepage links Mark's personal LinkedIn rather than the company page, so this is the face of the brand on LinkedIn.</li>
+            <li>Mark is in the middle of a 25-part written essay series on famous business collapses (Part 7 on Theranos, Part 8 on Bear Stearns, an interleaved piece on AI inside organizations). Every recent post is a text article link with 9 to 20 likes. The feed has no video.</li>
+          </ul>
+          <a class="source-link" href="https://www.linkedin.com/in/markmoses" target="_blank" rel="noopener">linkedin.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <a class="channel-link" href="https://www.linkedin.com/company/ceo-coaching-international/" target="_blank" rel="noopener" aria-label="Visit CCI on LinkedIn"></a>
+      <div class="channel-icon linkedin">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </div>
+      <div class="channel-body">
+        <div class="channel-head">
+          <span class="channel-name">LinkedIn (Company)</span>
+          <span class="channel-handle">company/ceo-coaching-international</span>
+        </div>
+        <div class="channel-snippet">
+          <ul>
+            <li>11,821 followers, 116 employees. About line: <em>"Coaching and strategic planning designed specifically for CEOs and their teams, delivered by former CEOs."</em></li>
+            <li>Daily-cadence posts, almost entirely text. Recent posts on the Strategic Partners model and the "25 Mistakes CEOs Make" resource pull between 3 and 19 likes each. A real publishing rhythm into the same quiet room the YouTube channel sees.</li>
+          </ul>
+          <a class="source-link" href="https://www.linkedin.com/company/ceo-coaching-international/" target="_blank" rel="noopener">linkedin.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <a class="channel-link" href="https://www.linkedin.com/in/mario-simon-2abaa01/" target="_blank" rel="noopener" aria-label="Visit Mario Simon on LinkedIn"></a>
+      <div class="channel-icon linkedin">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </div>
+      <div class="channel-body">
+        <div class="channel-head">
+          <span class="channel-name">LinkedIn (Mario)</span>
+          <span class="channel-handle">in/mario-simon-2abaa01</span>
+        </div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Your background is one of the most camera-ready stories on the CCI roster. Yale PhD with a Fulbright in behavioral economics, Managing Director at BCG, founder and CEO of Kantar Consulting (scaled twelve people to over one thousand in five years), CEO of ChangeMakers through a six-agency merger. Now Partner & Coach at CCI as of October 22, 2025.</li>
+            <li>None of that has been put on video at CCI yet. The new-Partner announcement reads as a press release, and the only film treatment of a CCI coach this year, <em>"Meet Mary Naylor,"</em> proves the format can carry when the subject has a real story to tell.</li>
+          </ul>
+          <a class="source-link" href="https://www.linkedin.com/in/mario-simon-2abaa01/" target="_blank" rel="noopener">linkedin.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <a class="channel-link" href="https://podcasts.apple.com/us/podcast/ceo-coaching-international-podcast/id996059304" target="_blank" rel="noopener" aria-label="Visit CCI Podcast on Apple Podcasts"></a>
+      <div class="channel-icon applepodcasts">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c1.243 0 2.25 1.007 2.25 2.25S13.243 9 12 9s-2.25-1.007-2.25-2.25S10.757 4.5 12 4.5zm-3 9c0-1.657 1.343-3 3-3s3 1.343 3 3v3.75c0 .414-.336.75-.75.75h-4.5c-.414 0-.75-.336-.75-.75V13.5zm-3 0c0-3.314 2.686-6 6-6s6 2.686 6 6c0 .414-.336.75-.75.75s-.75-.336-.75-.75c0-2.485-2.015-4.5-4.5-4.5S7.5 11.015 7.5 13.5c0 .414-.336.75-.75.75S6 13.914 6 13.5z"/></svg>
+      </div>
+      <div class="channel-body">
+        <div class="channel-head">
+          <span class="channel-name">Podcast</span>
+          <span class="channel-handle">CEO Coaching International Podcast · since 2015</span>
+        </div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Around 272 episodes since 2015. Host Steve Sanduski. Mark Moses was previously co-host. Latest episode on May 6, 2026: <em>"Jaspar Weir: Building a Billion-Dollar-Plus Company Starts with Thinking Bigger."</em></li>
+            <li>The catalog is audio-only on Apple. A new sister format, <em>Make BIG Happen Podcast,</em> was announced on YouTube in March 2026 (76 views on the launch video, 4 likes). The conversations that built the brand exist as audio. None of them lives as video.</li>
+          </ul>
+          <a class="source-link" href="https://podcasts.apple.com/us/podcast/ceo-coaching-international-podcast/id996059304" target="_blank" rel="noopener">apple podcasts</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro" id="sec-reel">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">01</span>
+      <span class="section-eyebrow">The CCI Reel</span>
+    </div>
+    <h2 class="section-title">A Look At What's Already In Public</h2>
+    <p class="section-subtitle">A few specifics from across CCI's public surfaces, with an honest read on each.</p>
+  </div>
+
+  <div class="reel-grid">
+
+    <div class="reel-card">
+      <div class="reel-eyebrow">The Outlier</div>
+      <div class="reel-title">Meet Mary Naylor · 24,428 Views</div>
+      <div class="reel-body">August 4, 2025. One of four "Meet [Coach]" videos posted that day. Mary's film hit 24,428 views and one like. <em>"Meet Greg Martin,"</em> <em>"Meet Spencer Schaefer,"</em> and <em>"Meet Chris Justice"</em> from the same upload day landed at 4, 12, and 12 views. The audience showed up when one subject had a real story to share, not because the format carried.</div>
+      <a class="source-link" href="https://www.youtube.com/channel/UCFrE489fb4Zn6Sr5CnoRz9w" target="_blank" rel="noopener">youtube.com</a>
+    </div>
+
+    <div class="reel-card">
+      <div class="reel-eyebrow">The Voice On Paper</div>
+      <div class="reel-title">25-Part Essay Series From Mark Moses</div>
+      <div class="reel-body">Mark is in the middle of a 25-part written series on famous business collapses. Part 7 on Theranos went up March 5. Part 8 on Bear Stearns went up April 1. Each part has a transferable lesson at the end. Every part is a text article on his personal LinkedIn at 9 to 20 likes. None of them is a film.</div>
+      <a class="source-link" href="https://www.linkedin.com/in/markmoses" target="_blank" rel="noopener">linkedin.com</a>
+    </div>
+
+    <div class="reel-card">
+      <div class="reel-eyebrow">The Catalog</div>
+      <div class="reel-title">272 Podcast Episodes Since 2015</div>
+      <div class="reel-body">Eleven straight years of CEO conversations. Latest episode May 6, 2026: <em>"Jaspar Weir: Building a Billion-Dollar-Plus Company Starts with Thinking Bigger."</em> Audio-only on Apple. Every episode is a conversation that would work on camera. None of them is on the YouTube channel as video.</div>
+      <a class="source-link" href="https://podcasts.apple.com/us/podcast/ceo-coaching-international-podcast/id996059304" target="_blank" rel="noopener">apple podcasts</a>
+    </div>
+
+    <div class="reel-card">
+      <div class="reel-eyebrow">The Roster</div>
+      <div class="reel-title">60+ Partners And Certified Coaches</div>
+      <div class="reel-body">The /coaches directory lists more than sixty names, with Mark Moses as Founding Partner and Executive Chairman, Randy Dewey as CEO, and Sheldon Harris currently coaching NewDay USA. You're the most recent Partner addition. Every coach has an operating story behind the bio card, and almost none of those stories has been filmed.</div>
+      <a class="source-link" href="https://ceocoachinginternational.com/coaches/" target="_blank" rel="noopener">ceocoachinginternational.com/coaches</a>
+    </div>
+
+    <div class="reel-card">
+      <div class="reel-eyebrow">The Named Exits</div>
+      <div class="reel-title">Jiffy Lube · Under Canvas · Victra · ShipMonk</div>
+      <div class="reel-body">Six client outcomes on the homepage carry names: Richard Paek at Jiffy Lube, Sarah Dusek at Under Canvas, Rich Balot at Victra, and Lucent Health, NewDay USA, and ShipMonk. Each is a founder story sitting in a paragraph of case-study text, waiting for the documentary treatment the deal itself already deserved.</div>
+      <a class="source-link" href="https://ceocoachinginternational.com/" target="_blank" rel="noopener">ceocoachinginternational.com</a>
+    </div>
+
+    <div class="reel-card">
+      <div class="reel-eyebrow">The Cadence</div>
+      <div class="reel-title">Daily Company · Weekly Mark · Monthly Podcast</div>
+      <div class="reel-body">The company LinkedIn page publishes most weekdays into 11,821 followers, Mark ships a long-form essay most weeks into his 30,000, and the podcast goes up roughly once a month. The publishing rhythm is real and steady. The video channel runs at the same cadence and the audience there has not formed.</div>
+      <a class="source-link" href="https://www.linkedin.com/company/ceo-coaching-international/" target="_blank" rel="noopener">linkedin.com</a>
+    </div>
+
+    <div class="reel-card" style="grid-column:1/-1">
+      <div class="reel-eyebrow">The Numbers</div>
+      <div class="reel-title">$26.6B · 107 Exits · 22.8% / 37.5% CAGR</div>
+      <div class="reel-body">Lifetime to date: more than 2,000 CEOs and entrepreneurs coached across 90+ countries, and 107 client exits worth a combined $26.6 billion. The average client carries a 22.8% revenue CAGR (close to twice the U.S. average) and a 37.5% EBITDA CAGR (close to three times). The Net Promoter Score is 64.91. These are the kinds of numbers that would normally sit inside a documentary film, and they sit inside a stat block on the homepage instead.</div>
+      <a class="source-link" href="https://ceocoachinginternational.com/" target="_blank" rel="noopener">ceocoachinginternational.com</a>
+    </div>
+
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro" id="sec-equity">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">02</span>
+      <span class="section-eyebrow">The Equity You've Built</span>
+    </div>
+    <h2 class="section-title">Three Layers, Two Strong, One To Evolve</h2>
+    <p class="section-subtitle">Two are earned and working. The third is the one this audit is really about.</p>
+  </div>
+
+  <div class="section-block">
+    <p><strong>Operator equity.</strong> CEO Coaching International has built one of the most credentialed coaching firms in the world. The firm is on eleven years of operating history, with Mark Moses as Founding Partner and Executive Chairman, Randy Dewey as CEO, a leadership team that spans operations, AI, product, finance, and sales, and 116 employees on the books. The roster runs more than sixty Partners and Certified Coaches. The client outcomes are extraordinary by any benchmark: more than 2,000 CEOs and entrepreneurs coached across 90+ countries, 107 exits worth a combined $26.6 billion, an average client revenue CAGR of 22.8% and an average client EBITDA CAGR of 37.5%. The credentials are not in question.</p>
+    <p><strong>Distribution equity.</strong> The owned channels are real and active. Mark's personal LinkedIn carries 30,000 followers, the company page carries another 11,821, and the CEO Coaching International Podcast has shipped 272 episodes since 2015, with a sister format now launching on YouTube. The cadence is steady too: daily text posts on the company page and weekly essays from the founder. The publishing system to ship is in place, and the brand voice has been carried on paper and on audio with discipline for more than a decade.</p>
+    <p><strong>Storytelling equity.</strong> This is the part worth evolving. The catalog of stories CCI has earned the right to tell is enormous: six named exit clients on the homepage, more than sixty Partners with operating backgrounds before the coaching work, 272 recorded conversations with CEOs since 2015, and a 25-part written series on famous business collapses being shipped this year. None of it has been treated as video. The YouTube channel publishes regularly, 164 videos shipped, but the recent ten average one like and zero comments. <em>"Meet Mary Naylor"</em> showed what one of these stories looks like when the audience is ready: 24,428 views in a single film. The audit is on what changes when the same craft and audience-first thinking gets applied to the rest of the catalog.</p>
+    <p>That gap is what this audit is really about. The hard part, building the firm, the team, the client outcomes, and a real publishing rhythm, is already done. The work below is on what flows through the system you've already built.</p>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro" id="sec-strategy">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">03</span>
+      <span class="section-eyebrow">Lead With Value</span>
+    </div>
+    <h2 class="section-title">The Legendeering Framework, In One Page</h2>
+    <p class="section-subtitle">The methodology behind every Talex production. Five directives, one core principle.</p>
+  </div>
+
+  <div class="section-block">
+    <p>Legendeering is Talex's proprietary strategy. The core principle is straightforward: lead with value, always. The brand earns trust by giving without expectation, and that trust grows over time because people keep choosing to watch.</p>
+    <p>Five directives drive it:</p>
+    <ul style="list-style:none;padding:0;margin:0.5rem 0 1rem">
+      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Give Without Expectation.</strong> Value delivered without strings. The kind of generosity that builds loyalty money cannot buy.</li>
+      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Be Relentlessly Authentic.</strong> Say true things. Show real work. Speak like a human being.</li>
+      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">It's Not About You. It's About Them.</strong> The audience has to come first. It's all about their wants and needs and making something they will choose to watch.</li>
+      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Start With Story, Follow With Facts.</strong> Story gives information shape, context, and emotional weight. Facts alone rarely move people.</li>
+      <li style="position:relative;padding-left:16px;margin-bottom:7px;font-size:14px;line-height:1.7;color:var(--txt2)"><span style="position:absolute;left:4px;top:-1px;color:var(--o);font-weight:700;font-size:18px;line-height:1">·</span><strong style="color:var(--txt);font-weight:500">Consistency Is Key.</strong> Trust is built in moments, repeated over time.</li>
+    </ul>
+    <p>Each idea below is one of these directives in production. <em>"The Exit"</em> starts with story before any coaching framework. <em>"Coach As Operator"</em> gives without expectation by letting the audience meet the person behind the bio card. The video adaptation of Mark's collapse essays puts the audience first by treating the question of how good companies fall apart as the actual subject of the work.</p>
+    <p>CCI has built genuine operator and distribution equity. The three ideas below are what that equity looks like when it consistently lands as story instead of stat block.</p>
+  </div>
+
+  <div class="cred-row">
+    <span class="cred-chip">2x Emmy Nominated</span>
+    <span class="cred-chip">25 Years Production</span>
+    <span class="cred-chip">100+ Hours Distributed Globally</span>
+    <span class="cred-chip">BBC · NBC · Discovery · ABC · Netflix</span>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro" id="sec-worlds">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">04</span>
+      <span class="section-eyebrow">Three Ideas For Video</span>
+    </div>
+    <h2 class="section-title">Formats That Would Compound What You've Built</h2>
+    <p class="section-subtitle">Each idea passes the four tests: audience-first, entertaining as a stand-alone watch, novel rather than a remix, and built to compound across episodes. None of them require a new audience. They just need a home.</p>
+  </div>
+
+  <div class="ideas-grid">
+
+    <div class="idea-card idea-card-featured">
+      <div class="idea-num">01</div>
+      <div class="idea-body">
+        <div class="idea-title">"The Exit"</div>
+        <div class="idea-desc">A returning episodic documentary series. Each episode is one CCI-coached CEO, filmed across the run-up to a real exit. Sarah Dusek and Under Canvas. Richard Paek and Jiffy Lube. Rich Balot and Victra. One founder, one company, one inflection point, and the actual outcome on the other side. Documentary craft, the founder on camera, the coach in the supporting role, the brand behind the story. The names on the homepage are the casting pipeline. Specific subjects come out of pre-production with the coach and the founder. The format is what matters: each film stands alone, the series builds into a body of work the firm can point to for the next ten years.</div>
+      </div>
+    </div>
+
+    <div class="idea-card">
+      <div class="idea-num">02</div>
+      <div class="idea-body">
+        <div class="idea-title">"Coach As Operator"</div>
+        <div class="idea-desc">A portrait series profiling individual Partners and Certified Coaches in the context of the company they used to run, before the camera pulls back to how they coach today. Your portrait would open inside Kantar Consulting (twelve people scaled to over a thousand in five years) or inside the ChangeMakers merger of six agencies, then connect those operating decisions to the work you do with a current CEO. The format works for any coach on the sixty-plus roster who carries a real operating story behind them. It answers the question every founder has before they hire a coach: who am I actually going to be working with, and what did they actually do.</div>
+      </div>
+    </div>
+
+    <div class="idea-card">
+      <div class="idea-num">03</div>
+      <div class="idea-body">
+        <div class="idea-title">"The Collapse" · Mark Moses's Essay Series, On Film</div>
+        <div class="idea-desc">Mark is shipping a 25-part written series on famous business collapses. Theranos. Bear Stearns. Twenty-three more on the way. Each part already lands on a transferable lesson for current CEOs. The film treatment takes the same arc into video: archival footage of each company at the peak, named characters at the decision points that produced the fall, and Mark's framing of what the audience can use today. The essays are the storyboard. The series builds because every CEO in CCI's audience wants to know how the famous collapses actually happened, and almost none of them has the time to read 25 articles.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro" id="sec-films">
+    <div class="section-intro-row">
+      <span class="sec-pill-dark">05</span>
+      <span class="section-eyebrow">A Few Films Talex Has Made</span>
+    </div>
+    <h2 class="section-title">Three Projects Across Three Industries</h2>
+    <p class="section-subtitle">Same craft, same methodology, three very different jobs.</p>
+  </div>
+
+  <div class="case-card">
+    <div class="cs-label">Case Study 01 · Enterprise</div>
+    <div class="cs-name">Resorts World New York City</div>
+    <div class="cs-stat-strip">
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">$5.5B</div>
+        <div class="cs-stat-label">Site development investment</div>
+      </div>
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">10+</div>
+        <div class="cs-stat-label">Video pieces produced</div>
+      </div>
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">Dec '25</div>
+        <div class="cs-stat-label">Gaming license awarded</div>
+      </div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Challenge</div>
+      <div class="cs-section-body">In 2025, Resorts World International launched a high-stakes public campaign to secure a New York City commercial gaming license and advance their $5.5B investment to transform their existing casino at Aqueduct Racetrack into a full-scale integrated resort. Their communications needed to be credible, compelling, and precise.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Approach</div>
+      <div class="cs-section-body">Talex Media produced more than 10 distinct pieces of video content spanning community impact narratives, stakeholder communications, and public-facing advocacy. Each piece was built on a story-first foundation designed to move people, not just inform them.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Result</div>
+      <div class="cs-section-body">On December 15, 2025, the NY State Gaming Commission awarded Resorts World NYC one of only three downstate commercial gaming licenses. Talex Media's content supported one of the most consequential licensing decisions in NYC's recent history.</div>
+    </div>
+    <div class="cs-footer-meta">NYC Gaming License Awarded Dec 15, 2025 · 10+ Videos Produced · $5.5B Investment · Spring 2026 Opening</div>
+  </div>
+
+  <div class="case-card">
+    <div class="cs-label">Case Study 02 · Growth Brand</div>
+    <div class="cs-name">Sobo &amp; Sobo LLP</div>
+    <div class="cs-stat-strip">
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">2020</div>
+        <div class="cs-stat-label">Partnership begin date</div>
+      </div>
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">7</div>
+        <div class="cs-stat-label">States with Sobo offices</div>
+      </div>
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">5+</div>
+        <div class="cs-stat-label">Years of ongoing campaigns</div>
+      </div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Challenge</div>
+      <div class="cs-section-body">In 2020, Sobo &amp; Sobo, a New York-based personal injury law firm, engaged Talex Media. They needed commercial video campaigns that could anchor their brand, differentiate them in a competitive legal market, and fuel their growth ambitions across new markets.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Approach</div>
+      <div class="cs-section-body">Since 2020, Talex Media has produced all of Sobo &amp; Sobo's commercial video campaigns, an ongoing, multi-year embedded partnership bringing brand consistency, strategic communication, and production quality to every new market they enter.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Result</div>
+      <div class="cs-section-body">Since the partnership began, Sobo &amp; Sobo has grown from a NY-focused firm into a multi-state legal practice with offices in NY, CT, NJ, IL, OH, PA, and WI. Talex Media's campaigns have accompanied every stage of that expansion.</div>
+    </div>
+    <div class="cs-footer-meta">5+ Year Partnership · All Commercial Campaigns · 7 States: NY, CT, NJ, IL, OH, PA, WI</div>
+  </div>
+
+  <div class="case-card">
+    <div class="cs-label">Case Study 03 · Nonprofit</div>
+    <div class="cs-name">Elizabeth Seton Children's</div>
+    <div class="cs-stat-strip">
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">96</div>
+        <div class="cs-stat-label">Beds in new young adult center</div>
+      </div>
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">$156M</div>
+        <div class="cs-stat-label">Project investment</div>
+      </div>
+      <div class="cs-stat-cell">
+        <div class="cs-stat-num">2025</div>
+        <div class="cs-stat-label">Year of groundbreaking</div>
+      </div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Challenge</div>
+      <div class="cs-section-body">In 2020, Elizabeth Seton Children's launched a capital campaign to fund a $156 million young adult care facility for patients aging out of their pediatric program. They needed video content that would inspire donors, communicate urgency, and sustain momentum across a multi-year campaign.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Approach</div>
+      <div class="cs-section-body">Talex Media produced multiple pieces of informational, inspirational, and commercial fundraising content across the campaign lifecycle. Each piece was designed to give donors a genuine connection to the mission and the people it serves, not just a request for money.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Result</div>
+      <div class="cs-section-body">In August 2025, Elizabeth Seton Children's broke ground on their new 96-bed young adult center in White Plains, NY, the first standalone facility of its kind in the United States, providing care for young adults aged 18 to 35 with complex medical needs. The facility is expected to open in January 2028.</div>
+    </div>
+    <div class="cs-footer-meta">First standalone young adult complex-care facility in the U.S. · 96 beds · $156M · Groundbreaking Aug 2025</div>
+  </div>
+
+  <div class="cred-row">
+    <span class="cred-chip">2x Emmy Nominated</span>
+    <span class="cred-chip">25 Years Experience</span>
+    <span class="cred-chip">100+ Hours Distributed Globally</span>
+    <span class="cred-chip">BBC · Discovery · NBC Universal</span>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="cta-block">
+    <div class="cta-eyebrow">An Intro Call With Our Team</div>
+    <h2 class="disp cta-headline">Let's Connect</h2>
+    <p class="cta-sub">A short call to walk through what's in this audit, answer whatever you want to ask, and find out whether there's a fit. Nothing is sold on the call.</p>
+    <a class="cta-primary" href="https://calendly.com/d/ct7b-xvd-c9x/intro-call" target="_blank" rel="noopener">Book A Call With Our Team →</a>
+    <div class="cta-reply">Or just reply on LinkedIn and tell me what you actually thought. Happy to send you a copy of <em>Legendeering</em> if you'd like to read the longer version of the philosophy in section 03.</div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="section-intro" id="sec-faq">
+    <div class="section-intro-row">
+      <span class="sec-pill-dark">FAQ</span>
+      <span class="section-eyebrow">A Few Questions You Might Have</span>
+    </div>
+  </div>
+
+  <!-- FAQ — LOCKED 2026-04-28. Only {{PROSPECT_BRAND}} substitutes; do NOT edit any other wording. -->
+  <div class="faq-item">
+    <div class="faq-q">What does a call with you look like?</div>
+    <div class="faq-a">Fifteen minutes. We walk through this document, I answer whatever you want to ask, and we find out if there's a fit. Nothing is sold on the call.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How custom is this audit?</div>
+    <div class="faq-a">Everything in this document is based on your actual public presence. I don't send the same deck to different companies, this one was prepared specifically for CEO Coaching International.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What happens after the call?</div>
+    <div class="faq-a">If there's a fit, we send a formal proposal tailored to your team, your community, and the goals you described. If not, you leave with a clearer picture of your content opportunity and I wish you well.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How is your approach different from a typical video agency?</div>
+    <div class="faq-a">We start with the community, not the camera. Before any production decision, we map who you're speaking to, what they need from you, and what shift we're trying to produce in them. Format and craft follow from there.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">We already have a marketing team. Why should we work with Talex?</div>
+    <div class="faq-a">Perfect, that's actually how we prefer to work. Talex Media isn't a marketing agency. We're a video production company in the documentary and broadcast tradition. A strong marketing team brings audience clarity, channel strategy, and distribution. We bring the films that give them something worth distributing: customer hero pieces, episodic series, founder content built to a broadcast standard.</div>
+  </div>
+
+  <footer class="site-footer">
+    <span class="footer-brand">Talex Media</span>
+    <div class="footer-links">
+      <a href="https://www.talexmedia.com" target="_blank">talexmedia.com</a>
+      <a href="mailto:solutions@talexmedia.com">solutions@talexmedia.com</a>
+      <a href="https://calendly.com/d/ct7b-xvd-c9x/intro-call" target="_blank">Book a Call</a>
+    </div>
+    <div class="footer-copy">© 2026 Talex Media LLC · A Custom Strategy prepared for CEO Coaching International · May 2026</div>
+  </footer>
+
+</div>
+
+<script>
+function poke(){
+  try { window.parent.postMessage({ type:"wix-iframe-height", height: document.documentElement.scrollHeight }, "*"); } catch(e){}
+}
+window.addEventListener("load", function(){
+  if (window.ResizeObserver) new ResizeObserver(poke).observe(document.body);
+  poke();
+});
+</script>
+
+</body>
+</html>
